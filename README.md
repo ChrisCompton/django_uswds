@@ -1,6 +1,15 @@
 # Django USWDS Theme
 
-Documentation: https://designsystem.digital.gov/documentation/developers/
+USWDS Documentation: https://designsystem.digital.gov/documentation/developers/
+
+To add to your Django project, from the base directory:
+
+```sh
+git submodule add https://github.com/ChrisCompton/django-uswds
+```
+
+Submodules can be confusing to manage in your project, but are very powerful.  You can [learn more here](https://www.atlassian.com/git/tutorials/git-submodule).
+
 
 In `settings.py`:
 
@@ -8,7 +17,7 @@ In `settings.py`:
     TEMPLATES = [
         {
             "BACKEND": "django.template.backends.django.DjangoTemplates",
-            "DIRS": ['uswds/templates'],
+            "DIRS": ['django-uswds/templates'],
             "APP_DIRS": True,
             ...
         },
@@ -17,7 +26,7 @@ In `settings.py`:
 
 ```python
     STATICFILES_DIRS = [
-        ("uswds", BASE_DIR / "uswds/vendor/dist")
+        ("uswds", BASE_DIR / "django-uswds/vendor/dist")
     ]
 ```
 
