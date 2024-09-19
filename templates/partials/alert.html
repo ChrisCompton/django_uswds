@@ -1,0 +1,27 @@
+{% comment "Optional note" %}
+
+  This is an alert template that can be used to display messages to users. It is
+  based on the U.S. Web Design System's alert component. The alert can be
+  customized by passing in the following variables:
+
+  - heading: The heading of the alert.
+  - message: The message to display in the alert.
+  - style: The style of the alert. Options are 'info', 'warning', 'error', or
+    'success'. The default is 'info'.
+
+  Example usage:
+
+  {% include 'partials/alert.html' with heading='This is an alert' message='This is a message' style='info' %}
+
+  For more information: https://designsystem.digital.gov/components/alert/
+
+{% endcomment %}
+
+<div class="usa-alert usa-alert--{{ style | default:'info' }}">
+    <div class="usa-alert__body">
+      <h4 class="usa-alert__heading">{{ heading }}</h4>
+      <p class="usa-alert__text">
+        {{ message }}
+      </p>
+    </div>
+</div>
