@@ -1,0 +1,24 @@
+{% comment %}
+    This is a header template that can be used to display a header on a page. It is
+    based on the U.S. Web Design System's header component. The header can be
+    customized by passing in the following variables:
+    
+    - title: The title of the page. This will be displayed in the header.
+    
+    Example usage:
+    
+    {% include 'partials/header.html' with title='My Page Title' %}
+    
+    For more information: https://designsystem.digital.gov/components/header/
+{% endcomment %}
+
+
+<header class="usa-header usa-header--basic">
+    <div class="usa-nav-container">
+      <div class="usa-navbar">
+        <div class="usa-logo">
+          <em class="usa-logo__text"><a href="/" title="{{ title }}">{{ title }}</a></em>
+        </div>
+      </div>
+    </div>
+</header>
