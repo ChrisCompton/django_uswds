@@ -1,0 +1,18 @@
+{% comment %}
+    This is a text input template that can be used to display a text input on a page. It is
+    based on the U.S. Web Design System's text input component. The text input can be
+    customized by passing in the following variables:
+    
+    - label: The label for the text input. This will be displayed above the text input.
+    - id: The id for the text input. This will be used to associate the label with the text input.
+    - name: The name for the text input. This will be used to identify the text input in the form.
+    
+    Example usage:
+    
+    {% include 'partials/text_input.html' with label='Text input label' id='input-type-text' name='input-type-text' %}
+    
+    For more information: https://designsystem.digital.gov/components/form-controls/#text-input
+{% endcomment %}
+
+<label class="usa-label" for="{{ id }}">{{ label }}</label>
+<input class="usa-input" id="{{ id }}" name="{{ name }}" />
